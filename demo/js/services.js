@@ -25,18 +25,18 @@ return {
 				', adEvent:' + data.adEvent); // adType: 'banner' or 'interstitial'
 			});
 		   	document.addEventListener('onAdLoaded', function(data){
-				console.log('onAdLoaded: ' + JSON.istringfy(data));
+				console.log('onAdLoaded: ' + JSON.stringify(data));
 		   	});
 
 			document.addEventListener('onAdPresent', function(data){
-				console.log('onAdPresent: ' + JSON.istringfy(data));
+				console.log('onAdPresent: ' + JSON.stringify(data));
 		   	});
 		   	document.addEventListener('onAdLeaveApp', function(data){
-		    	console.log('onAdLeaveApp: ' + JSON.istringfy(data));
+		    	console.log('onAdLeaveApp: ' + JSON.stringify(data));
 		   	});
 		   	document.addEventListener('onAdDismiss', function(data){
 		   		_interstitialReady = false;
-		    	console.log('onAdDismiss: ' + JSON.istringfy(data));
+		    	console.log('onAdDismiss: ' + JSON.stringify(data));
 		   	});
 
 		   	_opt = {
