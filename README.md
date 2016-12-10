@@ -17,6 +17,18 @@ ionic start --appname "ADMobDemo" --id com.admob.demo admob blank
 cd admob
 ionic add ios
 ionic plugin add cordova-plugin-admobpro
+
+# remove all default files in www folder
+del -fr www/*
+
+# copy files from the demo folder of this repository to www folder
+cp -fr ../demo/* www/
+
+# run it
+ionic prepare ios
+ionic build ios
+ionic emulate ios
+
 ```
 
 ### Screenshot ###
