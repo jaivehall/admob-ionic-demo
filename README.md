@@ -19,16 +19,15 @@ ionic add ios
 ionic plugin add cordova-plugin-admobpro
 
 # remove all default files in www folder
-del -fr www/*
+rm -rf www/*
 
-# copy files from the demo folder of this repository to www folder
-cp -fr ../demo/* www/
+# download demo and copy files to www folder
+curl https://codeload.github.com/jaivehall/admob-ionic-demo/zip/master -o demo.zip
+unzip demo.zip
+cp -r admob-ionic-demo-master/demo/* www/
 
-# run it
-ionic prepare ios
-ionic build ios
+# build and run demo app in ios simulator
 ionic emulate ios
-
 ```
 
 ### Screenshot ###
